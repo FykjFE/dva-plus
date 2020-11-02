@@ -1,6 +1,7 @@
 import { create } from 'dva-core';
 import { persistEnhancer } from './enhancer';
-export function initStore(models: any[], options: any): any {
+import { Config } from './config';
+export function initStore(models: any[], options: Config): any {
   const app = create({
     extraEnhancers: [
       persistEnhancer({
