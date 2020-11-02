@@ -1,6 +1,6 @@
 {
   "name": "@fykj/dva-plus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "dva-core+持久化",
   "main": "lib/index.js",
