@@ -10,6 +10,7 @@
     "tsc": "tsc",
     "lint": "eslint src/**/*.{tsx,ts}",
     "dev": "rollup -c -w",
+    "patch":"npm version patch",
     "publish": "npm publish --access public"
   },
   "repository": {
