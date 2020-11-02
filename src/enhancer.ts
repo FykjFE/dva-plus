@@ -1,19 +1,19 @@
 import _ from 'lodash';
-import defaultOptions from './config';
+import { config, Config } from './config';
 
 let lastState = {};
-
-export default function (opts = {}) {
-  console.log(opts);
-
+export interface PersistEnhancer {
+  (opts?: Config): any;
+}
+const persistEnhancer: PersistEnhancer = (opts = {}) => {
   const { key, keyPrefix, blacklist, whitelist, storage } = {
-    ...defaultOptions,
+    ...config,
     ...opts,
   };
   const defaultState = storage.get(`${keyPrefix}:${key}`);
-  return (createStore) => (reducer, initialState = defaultState, enhancer) => {
+  return (createStore: any) => (reducer: any, initialState = defaultState, enhancer: any) => {
     const store = createStore(reducer, { ...initialState, ...defaultState }, enhancer);
-    function dispatch(action) {
+    function dispatch(action: any) {
       const res = store.dispatch(action);
       let thatState = store.getState();
       if (_.isArray(whitelist) && !_.isEmpty(whitelist)) {
@@ -29,4 +29,5 @@ export default function (opts = {}) {
     }
     return { ...store, dispatch };
   };
-}
+};
+export { persistEnhancer };

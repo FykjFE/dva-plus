@@ -1,12 +1,12 @@
-import babel from "rollup-plugin-babel";
-import resolve from "@rollup/plugin-node-resolve";
-const extensions = [".js", ".ts"];
+import babel from 'rollup-plugin-babel';
+import resolve from '@rollup/plugin-node-resolve';
+const extensions = ['.js', '.ts'];
 export default {
-  input: "./src/index.ts",
+  input: './src/index.ts',
   output: {
-    file: "lib/index.js",
-    name: "dva",
-    format: "umd",
+    file: 'lib/index.js',
+    name: 'dva',
+    format: 'umd',
     sourcemap: true,
   },
   plugins: [
@@ -15,7 +15,7 @@ export default {
       modulesOnly: true,
     }),
     babel({
-      exclude: "node_modules/**",
+      exclude: 'node_modules/**',
       extensions,
     }),
   ],

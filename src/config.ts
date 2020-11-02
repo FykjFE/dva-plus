@@ -1,6 +1,12 @@
-import { storage } from './storage';
-
-const config = {
+import { storage, Storage } from './storage';
+export interface Config {
+  key?: string;
+  storage?: Storage;
+  blacklist?: string[];
+  whitelist?: string[];
+  keyPrefix?: string;
+}
+const config: Config = {
   key: 'model',
   storage,
   blacklist: ['@@dva'],
@@ -8,4 +14,4 @@ const config = {
   keyPrefix: 'persist',
 };
 
-export default config;
+export { config };

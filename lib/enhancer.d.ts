@@ -1,1 +1,6 @@
-export default function (opts?: {}): (createStore: any) => (reducer: any, initialState: any, enhancer: any) => any;
+import { Config } from './config';
+export interface PersistEnhancer {
+    (opts?: Config): any;
+}
+declare const persistEnhancer: PersistEnhancer;
+export { persistEnhancer };

@@ -1,3 +1,1 @@
-import persistEnhancer from './enhancer';
-
-export { persistEnhancer };
+export { initStore } from './dva';
