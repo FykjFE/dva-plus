@@ -1,6 +1,6 @@
 {
   "name": "@fykj/dva-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "dva-core+持久化",
   "main": "lib/index.js",
@@ -10,7 +10,7 @@
     "tsc": "tsc",
     "lint": "eslint src/**/*.{tsx,ts}",
     "dev": "rollup -c -w",
-    "patch":"npm version patch",
+    "patch": "npm version patch",
     "publish": "npm publish --access public"
   },
   "repository": {
