@@ -1,6 +1,6 @@
 {
   "name": "@fykj/dva-plus",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "description": "dva-core+持久化",
   "main": "lib/index.js",
@@ -55,7 +55,6 @@
   "dependencies": {
     "dva-core": "^2.0.3",
     "lodash": "^4.17.20",
-
     "store": "^2.0.12"
   },
   "husky": {
