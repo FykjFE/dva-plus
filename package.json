@@ -26,6 +26,9 @@
     "url": "https://github.com/FykjFE/dva-plus/issues"
   },
   "homepage": "https://github.com/FykjFE/dva-plus#readme",
+  "peerDependencies": {
+    "redux": "4.x"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
@@ -40,6 +43,7 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "redux": "^4.0.5",
     "lint-staged": "^10.5.1",
     "prettier": "^2.1.2",
     "rollup": "^2.33.0",
@@ -51,7 +55,7 @@
   "dependencies": {
     "dva-core": "^2.0.3",
     "lodash": "^4.17.20",
-    "redux": "^4.0.5",
+
     "store": "^2.0.12"
   },
   "husky": {
